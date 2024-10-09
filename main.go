@@ -133,7 +133,7 @@ func healthZHandler(ctx context.Context) func(w http.ResponseWriter, req *http.R
 
 func greeterHandler(ctx context.Context) func(w http.ResponseWriter, req *http.Request) {
 	return func(w http.ResponseWriter, req *http.Request) {
-		name := "Stranger"
+		name := "Stranger guy"
 		if param := req.URL.Query().Get("name"); param != "" {
 			// https://codeql.github.com/codeql-query-help/go/go-reflected-xss/
 			name = html.EscapeString(param)
